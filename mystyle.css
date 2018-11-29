@@ -1,0 +1,382 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/*Common*/
+a{
+	color: #707070;
+	text-decoration: none;
+}
+
+a:hover{
+	color:aliceblue;
+}
+
+#logo {
+  margin: 0;
+  padding-top: 10px;
+	padding-left: 5px;
+}
+#logo img {
+  margin: auto;
+  border-radius: 50%;
+  width: 100px;
+  transition: 0.5s;
+}
+#logo img:hover {
+  transform: scale(1.15, 1.15);
+}
+.button:hover{
+	background-image: url(https://cdn.shopify.com/s/files/1/2321/0267/t/1/assets/sq.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.btn{
+	color:#222222;
+	background: #FBE6E8;
+	border: none;
+	padding:10px 15px;
+	border-radius: 2px;
+	opacity: 0.9;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+.btn:hover{
+	opacity: 1;
+}
+
+/*Header*/
+#header {
+  background: #FFFFFF;
+  overflow: hidden;
+	background: url(https://i.imgur.com/tOoejQJ.png);
+	background-position: bottom;
+	padding-bottom: 50px;
+	background-repeat: no-repeat;
+}
+
+#header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header-center a {
+	padding-left: 90px;
+	padding-bottom: 16px;
+  	color:#000000;
+	font-size: 18px;
+  	border-radius: 4px;
+  	text-decoration: none;
+  	text-align: center;
+  	transition: 0.5s;
+}
+
+.header-center a:hover {
+  background: image("https://cdn.shopify.com/s/files/1/2321/0267/t/1/assets/sq.png");
+}
+
+.header-right a {
+	padding-right: 16px;
+	padding-bottom: 16px;
+  color:#000000;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+	float: right;
+  transition: 0.5s;
+	vertical-align: middle;
+}
+
+.header-button {
+  transform: scale(2, 1.5);
+  float: right;
+  padding: 52.8px 25px 52.8px 0;
+  display: none;
+}
+
+.header-button {
+    display: block;
+  }
+
+/*Body*/
+body {
+  margin: 0;
+  font-family: Roboto , Arial, Helvetica, Montserrat;
+  text-shadow: 1.5px 1.5px 4px #000;
+	width: 1366px;
+	margin: 0 auto;	
+}
+
+.body{
+	background: url(https://i.imgur.com/ErgfKwg.jpg);
+	background-repeat: no-repeat;
+	color: #C9C9C9;
+	height: 580px;
+}
+
+/*Footer*/
+#footer {
+  margin: 0;
+  padding: 16px;
+  width: 100%;
+  background: url(https://i.imgur.com/MIFHAkH.png);
+	background-repeat: no-repeat;
+}
+
+#footer a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.footer-left {
+	padding-bottom: 10px;
+}
+
+.icon {
+  float: right;
+  width: 30px;
+  height: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text-link{
+	background: none;
+	border: none;
+	padding-bottom: 10px;
+	
+}
+
+/*Main Page Content*/
+.brand{
+	margin-top: 100px;
+	float: right;
+	margin-right: 600px;
+	width: 400px;
+}
+
+.h1{
+	opacity: 0.75;
+	margin-left: 400px;
+	margin-top: 90px;
+}
+
+.sale{
+	margin-left: 90px;
+	margin-top: 70px;
+}
+
+.mySlides {
+              display: none;
+          }
+.dot {
+            cursor:pointer;
+            height: 13px;
+            width: 13px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+          }
+
+.active, .dot:hover {
+     background-color: #717171;
+}
+
+          /* Thêm hiệu ứng khi chuyển đổi các slide */
+          .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 3s;
+            animation-name: fade;
+            animation-duration: 3s;
+          }
+
+          @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+          }
+
+          @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+          }
+
+/*Form*/
+#input{
+	border: none;
+	border-radius: 2px;
+	width: 400px;
+	height: 25px;
+	opacity: 0.7;
+}
+
+#input:focus{
+	opacity: 1;
+	border: thin solid #7E7CFF;
+}
+
+#pass{
+		border: none;
+	border-radius: 2px;
+	width: 400px;
+	height: 25px;
+	opacity: 0.7;
+}
+
+#pass:focus{
+	opacity: 1;
+	border: thin solid #7E7CFF;
+}
+
+/*FAQs*/
+.accordion {
+    background-color: #eee;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    width: 500px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.8s;
+    border:1px solid;
+    margin-top:20px;
+	border-radius: 3px;
+}
+.active, .accordion:hover {
+    background-color: #ccc;
+    transition: 0.7s;
+}
+
+.accordion:after {
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left:5px;
+    
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    background-color: black;
+    width:500px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    color: gray;
+    transition: 0.5s;
+    border:none;
+}
+
+/*Privacy Policies*/
+.pp{
+	margin-left: 50px;
+	text-align-last: left;
+}
+
+
+/*Products Page*/
+.left-menu{
+    width:20%;
+    float:left;
+	border-right: solid black;
+	margin-top: 55px;
+}
+
+.products{
+  padding: 10px;
+  overflow: hidden;
+}
+
+.product {
+  width: 278px;
+  height: 385px;		
+  float: left;
+  margin: 0.5em 1.2em;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  box-shadow: 3px 5px 5px -2px #999;
+  transition: 0.5s;
+	background: url(https://i.imgur.com/qenQ54S.png)
+}
+
+.product img {
+  width: 250px;
+  height:250px;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 14px;
+  margin-right: auto;
+}
+
+.product .product-name a{
+    text-decoration: none;
+    color:black;
+    text-align: center;
+}
+.product .product-name p {
+  padding: 10px 0 0 0;
+  overflow: hidden;
+  font-size: 1.2rem;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.product .product-name p:hover {
+  background-image: url(https://cdn.shopify.com/s/files/1/2321/0267/t/1/assets/sq.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.product .product-price p{
+  font-size:25px;
+  vertical-align: bottom;
+  text-align: center;
+}
+.product .product-price .price-deco {
+  margin-left:10px;
+  margin-right: 15px;
+  color: #000000;
+  text-decoration: line-through;
+  vertical-align: bottom;
+}
+.product .product-price .fix-price-highlight{
+  margin-left:15px;
+  text-decoration: none;
+  color:#FAD7DA;
+  font-weight:bold;
+  font-size: 30px
+}
+.pagination {
+  display: inline-block;
+  padding:1em;
+}
+
+.pagination a {
+  color: #000;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color:#FAD7DA;
+	border-radius: 5px;
+  color: white;
+}
+
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+	border-radius: 5px;
+}
+

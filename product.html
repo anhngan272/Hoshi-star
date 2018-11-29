@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Hoshi | Constellations</title>
+  <link rel="stylesheet" href="./mystyle.css">
+<script>
+var mang=["1","2","3","4"];
+	
+	function starType(idType,typeName)
+{
+	this.idType=idType;
+	this.typeName=typeName;
+}
+var tl= new Array();
+tl[0]=new starType("Basic","Basic");
+tl[1]=new starType("Cons","Constellation");
+tl[2]=new starType("Special","Special");
+
+
+function products(id,name, price, color, location, img, idType)
+{
+	this.id=id;
+	this.name=name;
+	this.price=price;
+	this.color=color;
+	this.location=location;
+	this.img=img;
+	this.starType=idType;
+}
+var sp = new Array();
+sp[0]=new products("product0","product0","21.00 $","black","...","https://i.imgur.com/REgZiHy.png","Basic");
+sp[1]=new products("product1","product1","25.99 $","black","...","https://i.imgur.com/REgZiHy.png","Basic");
+sp[2]=new products("product2","product2","22.38 $","black","...","https://i.imgur.com/REgZiHy.png","Basic");
+sp[3]=new products("product3","product3","2.49 $","black","...","https://i.imgur.com/REgZiHy.png","Special");
+sp[4]=new products("Cons01","Orion","5.49 $","Red","...","https://i.imgur.com/REgZiHy.png","Cons");
+sp[5]=new products("product5","product5","4.38 $","black","...","https://i.imgur.com/REgZiHy.png","Special");
+sp[6]=new products("product6","product6","30.99 $","black","...","https://i.imgur.com/REgZiHy.png","Basic");
+sp[7]=new products("product7","product7","3.33 $","black","...","https://i.imgur.com/REgZiHy.png","Special");
+sp[8]=new products("product8","product8","2.45 $","black","...","https://i.imgur.com/REgZiHy.png","Special");
+sp[9]=new products("Cons02","Hydra","6.99 $","Red","...","https://i.imgur.com/REgZiHy.png","Cons");
+sp[10]=new products("Cons03","Puppis","9.99 $","Red","...","https://i.imgur.com/REgZiHy.png","Cons");
+sp[10]=new products("Cons04","Puppis","9.99 $","Red","...","https://i.imgur.com/REgZiHy.png","Cons");
+sp[11]=new products("product11","product11","22.45 $","black","...","https://i.imgur.com/REgZiHy.png","Basic");
+sp[12]=new products("Cons05","Puppis","9.99 $","Red","...","https://i.imgur.com/REgZiHy.png","Cons");
+sp[13]=new products("product12","product12","23.00 $","Blue","...","https://i.imgur.com/REgZiHy.png","Basic");
+sp[14]=new products("product13","product13","27.00 $","Brown","...","https://i.imgur.com/REgZiHy.png","Basic");
+sp[15]=new products("product14","product14","26.50 $","Brown","...","https://i.imgur.com/REgZiHy.png","Basic");
+sp[16]=new products("product15","product15","24.50 $","Blue","...","https://i.imgur.com/REgZiHy.png","Basic");
+
+</script>
+  <style>
+	*{
+	margin:0;
+}
+#content{
+	width:60%;
+	float:left;
+	color:#F00;
+	height:400px;
+	}
+	
+.pagination {
+    display: inline-block;
+}
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+	border: 1px solid #ddd;
+	float: left;
+	margin: 4px 4px;
+}
+
+.pagination a:active {
+    background-color: gray;
+    color: white;
+}
+
+.pagination a:hover {background-color: #ddd;}
+</style>
+</head>
+	  <header id="header">
+	<div align="center" style="background: #FAD7DA; color: #FFFFFF;">WELCOME TO HOSHI. YOUR JOURNEY TO ACQUIRE A STAR OF YOUR OWN</div>
+    <div align="center" id="logo">
+      <a href="Hoshi.html"><img src="https://i.imgur.com/XME30IE.png" alt="logo" height="100px"></a>
+    </div>
+	<div class="header-right">
+		<a href="" title="Shopping cart"><img alt="shopping-cart" src="https://i.imgur.com/REgZiHy.png"></a>
+		<a href="login.html" title="Login"><img alt="login" src="https://i.imgur.com/WF1Q9p5.png"></a>
+	  </div>
+    <div align="center" class="header-center" id="home">
+      <a class="button" href="Hoshi.html">Home</a><a class="button" href="Hoshi.html">Shop</a>
+    </div>
+	  </header>
+<body>
+	<main id="main-id">
+
+    <div class="left-menu">
+    	<div class="">
+    <script type="text/javascript">
+//	var mang=["1","2","3","4"];
+
+
+function createMenu()
+{
+	var s="";
+	var vitri=0;
+	for(i=0;i<tl.length;i++)
+	{
+		var a='<a href="product.html?'+tl[i].idType+'&'+vitri+'"><div>';
+		s=s+a+tl[i].typeName+'</div></a>';
+	}
+	//alert(s);
+	document.getElementById("menu").innerHTML=s;
+}
+function layurl()
+			{
+				
+				var url = window.location.href;
+				var params = url.split('?');
+				var chuoicon=params[1];
+				var s="";
+				var dem=0, sotrang=1;
+				var lienket="";
+				chuoicon=chuoicon.split('&');
+				var vitri=chuoicon[1];
+				var sotrang;
+				var dem=0;
+				var tem=new Array()
+				
+				for(i=0;i<sp.length;i++)
+				{
+					if(sp[i].starType.indexOf(chuoicon[0])!=-1)
+					{
+						tem[dem]=new products(sp[i].id,sp[i].name,sp[i].price,sp[i].color,sp[i].location,sp[i].img,sp[i].idType);
+						dem++;
+					}
+				}
+				console.log("Gia tri cua mang tem:");
+				console.log(tem);
+				var soluongsp=0;
+				for(i=vitri;i<tem.length;i++)
+				{
+					console.log(i);
+					console.log(tem[i]);
+					s=s+'<a href="product.html?'+ tem[i].idType +'"><div align="center" style="float:left; width:48.5%; margin:1px;   border:#C90 		solid">'+'<img src="'+tem[i].img +'" width="150px" height="150px"  />'+ tem[i].name +'</div></a>';
+					soluongsp++;
+					if(soluongsp==4)
+						break;
+				}
+				var sotrang=Math.ceil(tem.length/4);
+				
+
+				// ghi chu 
+				//alert(chuoicon[0]);
+				for(i=1;i<=sotrang;i++)
+							{
+									vitri=(i-1)*4;
+									lienket=lienket+'<a href="product.html?'+ chuoicon[0]+'&'+vitri+'">'+i+'</a>';
+							}
+							var lienket2='<div class="pagination"> '+lienket+'</div>';
+							document.getElementById("sotrang").innerHTML=lienket2;
+							document.getElementById("noidungcontent").innerHTML=s;
+			}
+
+window.onload = function(){
+	createMenu();
+	layurl();
+};
+</script>
+		<p id="menu"></p>
+        	</div>
+		</div>
+    <div id="content">
+        	  <div id="noidungcontent">	
+              </div>
+    </div>
+            
+            <div style="clear:both" align="center" id="sotrang">Số Trang: </div>
+     </main>
+<footer id="footer">
+	<img alt="fr" src="https://i.imgur.com/ysVLJHc.png" style="float: right"> 
+	<div class="footer-left"  style="margin-top: 55px"><a class="button" href="FAQs.html">FAQs</a></div>
+	<div class="footer-left"><a class="button" href="terms-and-conditions.html">Terms and Conditions</a></div>
+	<div class="footer-left"><a class="button" href="privacy-policies.html">Privacy Policy</a></div>
+	<div class="footer-left"><a class="button" href="">About</a></div>
+	<img alt="paying-method" src="https://i.imgur.com/g0a2JHF.png" style="float: right">
+	<br>
+  <h7><a class="button" href="Hoshi.html">© 2018, Hoshi</a></h7>
+</footer>
+</body></html>

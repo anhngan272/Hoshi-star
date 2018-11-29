@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Hoshi | Login </title>
+  
+  <link rel="stylesheet" href="./mystyle.css">
+  <script src="./testzone_files/myScript.js.download"></script>
+   <script language="javascript">
+  	function checkLogin()
+	{
+		myFrmObj=document.login
+		if(myFrmObj.customerEmail.value=="")
+		{
+			window.alert("Oops! You didn't type in your email");
+			myFrmObj.customerEmail.focus();
+			return false;
+		}
+		else if (myFrmObj.customerPassword.value=="")
+		{
+			window.alert("Your password is blank. Somehow I doubt that");
+			myFrmObj.customerPassword.focus();
+			return false;
+		}
+		return true;
+	}
+  </script>
+  <style>
+	*{
+	margin:0;
+}
+</style>
+</head>
+	
+<body>
+
+  <header id="header">
+	<div align="center" style="background: #FAD7DA; color: #FFFFFF;">WELCOME TO HOSHI. YOUR JOURNEY TO ACQUIRE A STAR OF YOUR OWN</div>
+    <div align="center" id="logo">
+      <a href="Hoshi.html"><img src="https://i.imgur.com/XME30IE.png" alt="logo" height="100px"></a>
+    </div>
+
+	<div class="header-right">
+		<a href="" title="Shopping cart"><img alt="shopping-cart" src="https://i.imgur.com/REgZiHy.png"></a>
+		<a href="login.html" title="Login"><img alt="login" src="https://i.imgur.com/WF1Q9p5.png"></a>
+	  </div>
+    <div align="center" class="header-center" id="home">
+      <a class="button" href="Hoshi.html">Home</a><a class="button" href="">Shop</a>
+    </div>
+	  </header>
+
+<div align="center" id="CustomerLoginForm" class="form-vertical; body">
+  <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8" onSubmit="return checkLogin()" name="login">
+			<input type="hidden" name="form_type" value="customer_login">
+			<input type="hidden" name="utf8" value="✓">
+
+          <h1 align="center">Login</h1><br>
+
+          <label for="CustomerEmail">Email</label><br>
+    <input type="email" name="customerEmail" id="input" autocorrect="off" autocapitalize="off" autofocus><br>
+			
+                  <label for="CustomerPassword">Password</label><br>
+      <input type="password" value="" name="customerPassword" id="input">
+          
+
+          <div class="text-center">
+            
+              <p><br><a href="recover.html" id="RecoverPassword">Forgot your password?</a></p>
+            
+
+            <input type="submit" class="btn" value="SIGN IN">
+
+            <p>
+              <a href="register.html">Create account</a>
+            </p>
+          </div>
+
+  </form>
+      </div>
+
+<footer id="footer">
+	<img alt="fr" src="https://i.imgur.com/ysVLJHc.png" style="float: right"> 
+	<div class="footer-left" style="margin-top: 55px"><a class="button" href="FAQs.html">FAQs</a></div>
+	<div class="footer-left"><a class="button" href="terms-and-conditions.html">Terms and Conditions</a></div>
+	<div class="footer-left"><a class="button" href="privacy-policies.html">Privacy Policy</a></div>
+	<div class="footer-left"><a class="button" href="about-us.html">About</a></div>
+	<img alt="paying-method" src="https://i.imgur.com/g0a2JHF.png" style="float: right">
+	<br>
+  <h7><a class="button" href="Hoshi.html">© 2018, Hoshi</a></h7>
+</footer>
+
+
+</body></html>

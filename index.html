@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title>Hoshi</title>
+
+        <link rel="stylesheet" href="./mystyle.css">
+        <script src="./testzone_files/myScript.js.download"></script>
+        
+    </head>
+
+<header id="header">
+            <div align="center" style="background: #FAD7DA; color: #FFFFFF;">WELCOME TO HOSHI. YOUR JOURNEY TO ACQUIRE A STAR OF YOUR OWN</div>
+            <div align="center" id="logo">
+                <a href="Hoshi.html">
+                    <img src="https://i.imgur.com/XME30IE.png" alt="logo" height="100px">
+                </a>
+            </div>
+
+            <div class="header-right">
+                <a href="" title="Shopping cart">
+                    <img alt="shopping-cart" src="https://i.imgur.com/REgZiHy.png">
+                </a>
+                <a href="login.html" title="Login">
+                    <img alt="login" src="https://i.imgur.com/WF1Q9p5.png.png">
+                </a>
+            </div>
+            <div align="center" class="header-center">
+                 <a class="button" href="Hoshi.html">Home</a><a class="button" href="product.html?Basic&0">Shop</a>
+            </div>
+        </header>
+	
+<body>        
+    <div class="body">
+		
+		<img alt="brand" src="https://cdn.shopify.com/s/files/1/2321/0267/files/Squiggle-isolated_900x.png?v=151915805">
+      <div class="brand">
+        <h2 class="h2">THE BRAND.</h2>
+      
+      
+        <div><p>HOSHI is Japanese for 'star'.&nbsp;</p>
+<p>Go on a journey and own a star when you come back.&nbsp;</p>
+<p>Created as a university project.</p></div>
+       </div> 
+	<h1 class="h1">SOME WHERE OUT THERE <br> A STAR IS WAITING FOR YOU</h1>
+  </div>
+	
+	<div>
+        	<div></div><br />
+        	<div>
+        	  <div id="noidungcontent">	
+        <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="https://wallpaperplay.com/walls/full/3/a/5/76587.jpg" style="width:100%;height: 500px">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="https://ic.pics.livejournal.com/analitic/34244958/1666398/1666398_900.png" style="width:100%;height: 500px">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="https://us.123rf.com/450wm/foxyliam/foxyliam1702/foxyliam170200229/73016281-puppis-poop-deck-constellation-in-the-night-starry-sky-vector-illustration.jpg?ver=6" style="width:100%;height: 500px">
+        </div>
+      </div>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(0)"></span> 
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+      </div>
+      <script>
+
+      var slideIndex;
+ 
+      function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+
+          slides[slideIndex].style.display = "block";  
+          dots[slideIndex].className += " active";
+   
+          slideIndex++;
+       
+          if (slideIndex > slides.length - 1) {
+            slideIndex = 0
+          }    
+    
+          setTimeout(showSlides, 10000);
+      }
+ 
+      showSlides(slideIndex = 0);
+
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+        </script>
+      </div>
+   		</div>          
+        	</div>
+	
+	<img alt="sale" src="https://static-2.gumroad.com/res/gumroad/7964495278830/asset_previews/842e5e73b529e78d2838858bbcc7c857/retina/motionless_wallpaper_pack_aug_2718.png" width="500px" style="float: right; padding-right: 100px; padding-top: 10px">
+	<div style="height: 150px">  
+         
+		<div class="sale">
+                
+                  <h4 class="h4">PSST!</h4>
+                
+                
+                  <div class="rte-setting"><p>For Grand Opening, our first 200 customers will have a free high resolution wallpaper pack from WANEELA. Only while supplies last.&nbsp;</p></div>
+                
+              </div>  
+        </div>	
+	
+	
+        
+</body>	
+	<footer id="footer">
+     <img alt="fr" src="https://i.imgur.com/ysVLJHc.png" style="float: right">       
+    <div class="footer-left" style="margin-top: 55px"><a class="button" href="FAQs.html">FAQs</a>
+            </div>
+            <div class="footer-left"><a class="button" href="terms-and-conditions.html">Terms and Conditions</a>
+            </div>
+            <div class="footer-left"><a class="button" href="privacy-policies.html">Privacy Policy</a>
+            </div>
+            <div class="footer-left"><a class="button" href="about-us.html">About</a>
+            </div>
+            <img alt="paying-method" src="https://i.imgur.com/g0a2JHF.png" style="float: right">
+            <br>
+            <h7><a class="button" href="Hoshi.html">© 2018, Hoshi</a></h7>
+        </footer>
+</html>

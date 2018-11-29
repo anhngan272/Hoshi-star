@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Hoshi | Registration</title>
+  
+  <link rel="stylesheet" href="./mystyle.css">
+  <script src="./testzone_files/myScript.js.download"></script>
+<script language="javascript">
+function checkForm()
+{
+	myFrmObj=document.createAccount
+	if(myFrmObj.customerFirst_name.value=="")
+	{
+		window.alert("Hello? You forgot to put in your first name");
+		myFrmObj.customerFirst_name.focus();
+		return false;
+	}
+	else if(myFrmObj.customerLast_name.value=="")
+	{
+		window.alert("Hello? You forgot to put in your last name");
+		myFrmObj.customerLast_name.focus();
+		return false;
+	}
+	else if(myFrmObj.customerEmail.value=="")
+	{
+		window.alert("Oops! You didn't type in your email");
+		myFrmObj.customerEmail.focus();
+		return false;
+	}
+	else if (myFrmObj.customerPassword.value=="")
+	{
+		window.alert("As great as it's sound, your password can't be blank");
+		myFrmObj.customerPassword.focus();
+		return false;
+	}
+	return true;
+}
+function confirmPass()
+{	
+	myFrmObj=document.createAccount
+	var ask=document.getElementById("pass") ;
+	if (myFrmObj.customerPassword.value.length<5)
+	{
+		ask = confirm("Are you sure you want that worst excuse of a password to be your actual password ?");
+		if(ask == false) 
+		{
+			alert("Try again");
+			myFrmObj.customerPassword.focus();
+			return false;
+		}
+	}
+	else {
+	 	ask = confirm("Are you satisfied with your answer cause you will not be able to change it later?"); 
+		if(ask == false) 
+		{
+			alert("Try again then");
+			
+			myFrmObj.customerPassword.focus();
+			
+			return false;
+		} //else return true;
+	}
+	return true;
+}
+function checkTerm()
+{
+	var checkBox= document.getElementById("checkbox");
+	myFrmObj=document.createAccount
+	if(checkBox.checked == false)
+	{
+		alert("Can't be a follower if you don't follow the rule. Please check out our Terms and Services");
+		myFrmObj.check.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+<style>
+	*{
+	margin:0;
+}
+</style>
+</head>
+	
+<body>
+
+  <header id="header">
+	<div align="center" style="background: #FAD7DA; color: #FFFFFF;">WELCOME TO HOSHI. YOUR JOURNEY TO ACQUIRE A STAR OF YOUR OWN</div>
+    <div align="center" id="logo">
+      <a href="Hoshi.html"><img src="https://i.imgur.com/XME30IE.png" alt="logo" height="100px"></a>
+    </div>
+
+	<div class="header-right">
+		<a href="" title="Shopping cart"><img alt="shopping-cart" src="https://i.imgur.com/REgZiHy.png"></a>
+		<a href="login.html" title="Login"><img alt="login" src="https://i.imgur.com/WF1Q9p5.png"></a>
+	  </div>
+    <div align="center" class="header-center" id="home">
+      <a class="button" href="Hoshi.html">Home</a><a class="button" href="">Shop</a>
+    </div>
+	  </header>
+
+<div align="center" class="body">
+        <form method="post" action="/account" id="create_customer" accept-charset="UTF-8" name="createAccount"
+        onSubmit=" return checkForm(), checkTerm()">
+			<input type="hidden" name="form_type" value="create_customer">
+			<input type="hidden" name="utf8" value="✓">
+
+          <h1 class="text-center">Create Account</h1><br>
+
+          
+
+          <label for="FirstName">First Name</label><br>
+          <input type="text" name="customerFirst_name" id="input" autofocus><br>
+
+          <label for="LastName">Last Name</label><br>
+          <input type="text" name="customerLast_name" id="input"><br>
+
+          <label for="Email">Email</label><br>
+          <input type="email" name="customerEmail" id="input" class="" autocorrect="on" autocapitalize="off"><br>
+
+          <label for="CreatePassword">Password</label><br>
+          <input type="password" name="customerPassword" id="pass" class=""><br><br>
+		  
+          <p class="text-center" style="font-size:11px; text-align:center" ><input type="checkbox" name="check" id="checkbox" > I have read your Terms and Services and will guarantee that all the information above is true and I will held responsible for it. <br></p>
+          <p>
+            <input type="submit" value="CREATE" class="btn" onClick=" return confirmPass() " >
+          </p>
+
+        </form>
+      </div>
+<footer id="footer">
+	<img alt="fr" src="https://i.imgur.com/ysVLJHc.png" style="float: right"> 
+	<div class="footer-left" style="margin-top: 55px"><a class="button" href="FAQs.html">FAQs</a></div>
+	<div class="footer-left"><a class="button" href="">Terms and Conditions</a></div>
+	<div class="footer-left"><a class="button" href="privacy-policies.html">Privacy Policy</a></div>
+	<div class="footer-left"><a class="button" href="about-us.html">About</a></div>
+	<img alt="paying-method" src="https://i.imgur.com/g0a2JHF.png" style="float: right">
+	<br>
+  <h7><a  class="button" href="Hoshi.html">© 2018, Hoshi</a></h7>
+</footer>
+
+
+</body></html>
