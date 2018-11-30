@@ -114,7 +114,7 @@ body {
 
 .body{
 	background: url(https://i.imgur.com/ErgfKwg.jpg);
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	color: #C9C9C9;
 	height: 580px;
 }
@@ -379,3 +379,18 @@ body {
   background-color: #ddd;
 	border-radius: 5px;
 }
+/*Back to top*/
+#totop {
+	display:none;
+	position:fixed;
+	bottom:10%;
+	right:3%;
+	font-size:20px;
+	border:none;
+	background-color:#FAD7DA;
+	cursor:pointer;
+	padding:20px;
+	border-radius:30px;
+}
+
+
