@@ -306,8 +306,8 @@ body {
   border-radius: 5px;
   box-shadow: 3px 5px 5px -2px #999;
   transition: 0.5s;
-	background: url(https://i.imgur.com/qenQ54S.png)
-}
+	background: url(https://i.imgur.com/qenQ54S.png);
+		overflow: hidden
 
 .product img {
   width: 250px;
@@ -379,4 +379,3 @@ body {
   background-color: #ddd;
 	border-radius: 5px;
 }
-
