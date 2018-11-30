@@ -1,14 +1,32 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
         <title>Hoshi</title>
 
         <link rel="stylesheet" href="./mystyle.css">
         <script src="./testzone_files/myScript.js.download"></script>
-        
+        <script src="./scrolltotop.js"></script>
+        <style>
+#totop {
+	display:none;
+	position:fixed;
+	bottom:10%;
+	right:3%;
+	font-size:20px;
+	border:none;
+	background-color:#FAD7DA;
+	cursor:pointer;
+	padding:20px;
+	border-radius:30px;
+}
+body {
+ 	scroll-behavior: smooth;
+}
+		</style>
     </head>
 
 <header id="header">
@@ -19,20 +37,24 @@
                 </a>
             </div>
 
+            <div class="header-button" onclick="toggleHeaderRightMenu()">☰</div>
             <div class="header-right">
                 <a href="" title="Shopping cart">
                     <img alt="shopping-cart" src="https://i.imgur.com/REgZiHy.png">
                 </a>
-                <a href="login.html" title="Login">
+                <a href="admin/login.php" title="Login">
                     <img alt="login" src="https://i.imgur.com/WF1Q9p5.png.png">
                 </a>
             </div>
             <div align="center" class="header-center">
-                 <a class="button" href="Hoshi.html">Home</a><a class="button" href="product.html?Basic&0">Shop</a>
+                 <a class="button" href="Hoshi.html">Home</a><a class="button" href="">Shop</a>
             </div>
         </header>
-	
-<body>        
+<body>
+
+
+<button onclick="Backtotop()" id="totop" title="Back to top"><i class="fa fa-arrow-up"></i></button>
+    
     <div class="body">
 		
 		<img alt="brand" src="https://cdn.shopify.com/s/files/1/2321/0267/files/Squiggle-isolated_900x.png?v=151915805">
